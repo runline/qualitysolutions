@@ -27,6 +27,7 @@
 <!---------------------------------------------------------Home----------------------------------------------------------------------------------------------->
 <div data-role="page" id="home" data-theme="a">
 	<div data-role="header" data-position="fixed">
+	  
     	<h1>Home</h1>
 			<!---<a href="#login" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-arrow-r-black data-transsition="flip">Login</a>-->
         <div data-role="navbar">
@@ -39,6 +40,7 @@
         </div>
     </div>
     <div data-role="content">
+	<img src="themes/images/tebz.jpg" align="center">
 	<p>BF Quality Solutions view education as more like exploration than tourism. Learning is not necessarily easy and bite-sized, sometimes it can be challenging and more difficult but ultimately the trip is more rewarding. BF Quality Solutions provides a map to the territory and first-rate navigation skills, so participants emerge able to understand the terrain and ready to discover their path.</p>
 
 	<p>We are obsessed with our work being authentic and engaging. Our programmes are always customised; we simply don’t provide ‘off the shelf’ training. Our clients realise tangible benefits because what they learn from BF Quality Solutions is aligned to their own business strategies and resources. We provide real world solutions, working on real problems, not lectures or classroom theory. Our sessions always include plenty of lively practical work.</p>
@@ -46,7 +48,7 @@
 	<p>We show that professional development can produce immediate changes in behavior, shifts in performance and rapid results. Our clients usually need to hit particular business targets in a specific time-frame. We delight in the challenge to increase win-rates and sales volumes, gain new business, increase client satisfaction and increase margins.</P>
 	</div>
 	<div data-role="footer" data-position="fixed">
-	<h1>BF-QS</h1>
+	<h1><img src="themes/images/tebz.jpg" align="left">BF-QS</h1>
 	</div>
 </div>
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------>
@@ -67,6 +69,7 @@
         </div>
     </div>
     <div data-role="content">
+	<img src="themes/images/tebz.jpg" align="center">
 
 <p>BF Quality Solutions is legally registered as BF Quality Solutions (Pty) Ltd to provide a wide range of business and training services. We use the services of some of the industry’s top management, engineers, educational talent, along with both national and international quality assurance and control intellect and skills.</p>
 
@@ -108,14 +111,30 @@
         </div>
     </div>
     <div data-role="content">
+	
+	<img src="themes/images/tebz.jpg" align="center">
+	
 	<p>+27 73 195 9436</p>
 	<p>+27 71 789 8359</P>
-		<form id="contactform" action="contact.php" method="post">
-			Email: <input type="text" name="email" id="email"/></br />
-			Subject: <input type="text" name="subject" id="subject" /></br />
+		<form id="contactform" action="http://bfqualitysolutions.pixub.com/contact.php" method="post">
+			Email: <input type="text" placeholder="Enter e-mail" name="email" id="email"/></br />
+			Subject: <input type="text" placeholder="Enter Subject" name="subject" id="subject" /></br />
 			<label for="textarea">Message:</label>
-			<textarea cols="40" rows="8" name="message" id="message"></textarea></br />
-			<button id="submit">Send</button>
+			<textarea cols="40" placeholder="Type your message here"  rows="8" name="message" id="message"></textarea></br />
+			<button id="submit" value="send" onclick="done()">Send</button>
+			
+			           <script type="text/javascript">
+function done() {
+
+if( $("#email").val() == "" || $("#subject").val() == "" || $("#message").val() == "" ){
+	 	$("div#ackcontact").html("Please fill in everything");
+		}else{
+
+    window.location.href="#letsoalo";
+	}
+}
+</script>
+			
 		</form>
 		<div id="ackcontact"></div>
 	</div>
@@ -124,7 +143,37 @@
 	</div>
 </div>
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------>
+<!----------------------------------------------------after sending message----------------------------------------->
+<div data-role="page" id="letsoalo" data-theme="a">
+	<div data-role="header" data-position="fixed">
+    	<h1>Recieved</h1>
+			<a href="#home" data-role="button" class = "ui-btn-left" data-transsition="flip">Home</a>
+			<!--<a href="#login" data-role="button" class = "ui-btn-right" data-transsition="flip">Login</a>-->
+        <div data-role="navbar">
+        	<ul>
+            	<li><a href="#form">Form</a></li>
+            	<li><a href="#about">About Us</a></li>
+            	<li><a href="#services">Services</a></li>
+            	<li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="content">
+	
+	<img src="themes/images/tebz.jpg" align="center">
+	<p><strong>Your message has been submited</strong></p>
+	<p><strong>We will contact you via e-mail</strong></p>
+			
+			           
+		
+	</div>
+	<div data-role="footer" data-position="fixed">
+	<h1>BF-QS</h1>
+	</div>
+</div>
 
+
+<!------------------------------------------------------------------------------------------------------------------>
 <!---------------------------------------------------------Services----------------------------------------------------------------------------------------------->
 <div data-role="page" id="services" data-theme="a">
 	<div data-role="header" data-position="fixed">
@@ -141,6 +190,7 @@
         </div>
     </div>
     <div data-role="content">
+	<img src="themes/images/tebz.jpg" align="center">
 
 		<p>1. Development of QMS manuals for different companies, including policies and procedures specified in QMS manuals</p>
 
@@ -183,15 +233,15 @@
     </div>
     <div data-role="content">
 		<form id="applyform" action="http://bfqualitysolutions.pixub.com/apply.php" method="post">
-			First Name: <input type="text" name="name" id="name" /></br />
-			Last Name: <input type="text" name="surname" id="surname" /></br />
-			Company: <input type="text" name="company" id="company" /></br />
-			Email: <input type="text" name="email" id="email" /></br />
-			Tel: <input type="text" name="tel" id="tel" /></br />
-			Fax<input type="text" name="fax" id="fax" /></br />
-			Mobile: <input type="text" name="cell" id="cell" /></br />
-			Physical Address: <input type="text" name="address" id="address" /></br />
-			Postal Address: <input type="text" name="paddress" id="paddress" /></br />
+			First Name: <input type="text" placeholder="Enter Name" name="name" id="name" /></br />
+			Last Name: <input type="text" placeholder="Enter Surname" name="surname" id="surname" /></br />
+			Company: <input type="text" placeholder="Enter Company name" name="company" id="company" /></br />
+			Email: <input type="text" placeholder="Enter e-mail" name="email" id="email" /></br />
+			Tel: <input type="text" placeholder="Enter tel NO:" name="tel" id="tel" /></br />
+			Fax<input type="text" placeholder="Enter fax NO:" name="fax" id="fax" /></br />
+			Mobile: <input type="text" placeholder="Enter Cell" name="cell" id="cell" /></br />
+			Physical Address: <input type="text" placeholder="Enter Physical Address " name="address" id="address" /></br />
+			Postal Address: <input type="text"placeholder="Enter Postal Address"  name="paddress" id="paddress" /></br />
 			I wish to apply for the following course: <select name="program" id="program">
 			<option value="">Please select a course</option>
 			<option value="Assessor Training" >Assessor Training</option>
@@ -235,9 +285,9 @@
 			<option value="12">12</option>
 			<option value="13">13</option>
 			</select><br />
-			Course Start Date: <input type=text data-role="startdate"> </br />
-			Person Responsible for Payment: <input type="text" name="designation" id="designation" /></br />
-			Date Of Payment: <input type=text data-role="paydate"> </br />	
+			Course Start Date: <input type="text" placeholder="dd/mm/yyyy" data-role="startdate"> </br />
+			Person Responsible for Payment: <input type="text" placeholder="Enter Name" name="designation" id="designation" /></br />
+			Date Of Payment: <input type="text" placeholder="dd/mm/yyyy" data-role="paydate"> </br />	
 			Where did you hear about BF Quality Solutions: <select name="how" id="how">
 			<option value="">Please select</option>
 			<option value="Website" >Website</option>
@@ -248,13 +298,13 @@
 			<option value="News Paper" >News Paper</option>
 			<option value="Other" >Other</option>
 			</select><br />
-			<button id="submit" value="redirect" onclick="Redirecting()">send</button>
+			<button id="submit" value="send" onclick="Redirecting()">send</button>
           
            
            <script type="text/javascript">
 function Redirecting() {
 
-if( $("#name").val() == "" || $("#surname").val() == "" || $("#tel").val() == "" || $("#cell").val() == "" || $("#fax").val() == ""  || $("#email").val() == "" || $("#address").val() == "" || $("#paddress").val() == "" || $("#program").val() == "" || $("#date").val() == "" ){
+if( $("#name").val() == "" || $("#surname").val() == "" || $("#program").val() == "" ){
 	 	$("div#ackapply").html("Please fill in everything");
 		}else{
 
@@ -365,23 +415,23 @@ if( $("#name").val() == "" || $("#surname").val() == "" || $("#tel").val() == ""
 <div data-role="page" id="afterredirect" data-theme="a">
 
 	<div data-role="header" data-position="fixed">
-    	<h1>thank you</h1>
+    	<h1>Submited</h1>
 			<a href="#home" data-role="button" class = "ui-btn-left" data-transsition="flip" data-icon="home">Home</a>
 			
     </div>
     <div data-role="content">
-    <p>Thank you for registering with Bf Quality Solutions </p>
-    <p>We will contact you via E-mail or via Telephone</p>
+    <p>Thank you for registering with <strong>Bf Quality Solutions.</strong> </p>
+    <p>We will contact you via <strong>e-mail</strong> or <strong>Telephone.</strong></p>
     
-   <!--- <button id="submit" value="" onclick="goto()">OK</button>
+   <button id="submit" value="ok" onclick="goto()">OK</button>
     
     <script type="text/javascript">
     function goto(){
     
      document.write("please wait for 5 seconds...");
-     setTimeout('window.location.href = "#about";', 5000);
+     setTimeout('window.location.href = "#about";', 2000);
 }
-</script>-->    
+</script>   
 				
 </div>
 	<div data-role="footer" data-position="fixed">
