@@ -1,3 +1,8 @@
+var url = "http://localhost/
+
+
+
+/*
 function showApplicant(id) {
     if (id == "") {
         document.getElementById("txt").innerHTML = "";
@@ -19,3 +24,4 @@ function showApplicant(id) {
         xmlhttp.send();
     }
 }
+*/

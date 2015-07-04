@@ -9,10 +9,6 @@
 	<link rel="stylesheet" href="js/jquery.mobile-1.4.5/jquery.mobile.structure-1.4.5.min.css" />
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	<script src="js/applicants.js"></script>
-	<script src="js/applicant.js"></script>
-	<script src="js/messages.js"></script>
-	<script src="js/message.js"></script>
 	<script>
 		function items(){
         showMessages();
@@ -23,7 +19,7 @@
     
 </head>
 
-<body onload="items();">
+<body onload="showApplicants()">
 <!---------------------------------------------------------Home----------------------------------------------------------------------------------------------->
 <div data-role="page" id="home" data-theme="a">
 	<div data-role="header" data-position="fixed">
@@ -40,7 +36,7 @@
         </div>
     </div>
     <div data-role="content">
-	<img src="themes/images/tebz.jpg" align="center">
+	<img src="themes/images/mdpii.jpg" align="center">
 	<p>BF Quality Solutions view education as more like exploration than tourism. Learning is not necessarily easy and bite-sized, sometimes it can be challenging and more difficult but ultimately the trip is more rewarding. BF Quality Solutions provides a map to the territory and first-rate navigation skills, so participants emerge able to understand the terrain and ready to discover their path.</p>
 
 	<p>We are obsessed with our work being authentic and engaging. Our programmes are always customised; we simply don’t provide ‘off the shelf’ training. Our clients realise tangible benefits because what they learn from BF Quality Solutions is aligned to their own business strategies and resources. We provide real world solutions, working on real problems, not lectures or classroom theory. Our sessions always include plenty of lively practical work.</p>
@@ -69,7 +65,7 @@
         </div>
     </div>
     <div data-role="content">
-	<img src="themes/images/tebz.jpg" align="center">
+	<img src="themes/images/mdpii.jpg" align="center">
 
 <p>BF Quality Solutions is legally registered as BF Quality Solutions (Pty) Ltd to provide a wide range of business and training services. We use the services of some of the industry’s top management, engineers, educational talent, along with both national and international quality assurance and control intellect and skills.</p>
 
@@ -112,7 +108,7 @@
     </div>
     <div data-role="content">
 	
-	<img src="themes/images/tebz.jpg" align="center">
+	<img src="themes/images/mdpii.jpg" align="center">
 	
 	<p>+27 73 195 9436</p>
 	<p>+27 71 789 8359</P>
@@ -160,7 +156,7 @@ if( $("#email").val() == "" || $("#subject").val() == "" || $("#message").val() 
     </div>
     <div data-role="content">
 	
-	<img src="themes/images/tebz.jpg" align="center">
+	<img src="themes/images/mdpii.jpg" align="center">
 	<p><strong>Your message has been submited</strong></p>
 	<p><strong>We will contact you via e-mail</strong></p>
 			
@@ -190,7 +186,7 @@ if( $("#email").val() == "" || $("#subject").val() == "" || $("#message").val() 
         </div>
     </div>
     <div data-role="content">
-	<img src="themes/images/tebz.jpg" align="center">
+	<img src="themes/images/mdpii.jpg" align="center">
 
 		<p>1. Development of QMS manuals for different companies, including policies and procedures specified in QMS manuals</p>
 
@@ -447,7 +443,7 @@ if( $("#name").val() == "" || $("#surname").val() == "" || $("#program").val() =
 	<div data-role="header" data-position="fixed">
     	<h1>login</h1>
 			<a href="#home" data-role="button" class = "ui-btn-left" data-transsition="flip" data-icon="home">Home</a>
-			<!---<a href="#register" data-role="button" class = "ui-btn-right" data-transsition="flip" data-icon="register">Sign Up</a>-->
+			<!--<a href="#register" data-role="button" class = "ui-btn-right" data-transsition="flip" data-icon="register">Sign Up</a>--->
     </div>
     <div data-role="content">
 		<form id="loginform" action="http://bfqualitysolutions.pixub.com/login.php" method="post">
@@ -469,7 +465,7 @@ if( $("#username").val() == "" || $("#password").val() == "" ){
 	 	$("div#ackredirect").html("Please enter both username and password");
 	 }else{
     window.location.href="#admin";
-	}
+	} 
 }
 </script>
 
@@ -500,7 +496,7 @@ function Redirection() {
 if( $("#username").val() == "" || $("#password").val() == "" ){
 	 	$("div#ackredirect").html("Please enter both username and password");
 	 }else{
-    window.location.href="#admin";
+    window.location.href="index.html#admin;
 	}
 }
 </script>
@@ -649,5 +645,9 @@ if( $("#username").val() == "" || $("#password").val() == "" ){
 <script src="js/login.js"></script>
 <script src="js/apply.js"></script>
 <script src="js/contact.js"></script>
+	<script src="js/applicants.js"></script>
+	<script src="js/applicant.js"></script>
+	<script src="js/messages.js"></script>
+	<script src="js/message.js"></script>
 </body>
 </html>
